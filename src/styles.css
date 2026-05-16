@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --ink: #10100f;
-  --lavender: #9484ff;
+  --section: #fff;
+  --theme-red: #ed2024;
   --white: #fffaf1;
   --blue: #0459ff;
   --acid: #d7ff28;
   --muted: #74716c;
   --line: rgba(16, 16, 15, 0.16);
-  --font-display: "Azeret Mono", monospace, sans-serif;
-  --font-body: "Azeret Mono", monospace, sans-serif;
+  /*  --font-display: "Azeret Mono", monospace, sans-serif;
+  --font-body: "Azeret Mono", monospace, sans-serif; */
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
   --nav-height: 3.6rem;
   --section-stack-top: var(--nav-height);
   --section-stack-height: calc(100svh - var(--section-stack-top));
@@ -25,7 +30,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--lavender);
+  background: var(--section);
   color: var(--ink);
   font-family: var(--font-body);
   overflow-x: hidden;
@@ -81,9 +86,9 @@ button {
 }
 
 .topline.nav-scrolled {
-  color: var(--ink);
-  background: var(--lavender);
-  box-shadow: 0 1px 0 rgba(16, 16, 15, 0.14);
+  color: var(--section);
+  background: var(--ink);
+  box-shadow: 0 1px 0 rgba(255, 250, 241, 0.14);
   backdrop-filter: blur(14px);
 }
 
@@ -196,7 +201,8 @@ h1 {
   min-width: 9rem;
   border: 1px solid rgba(255, 250, 241, 0.24);
   background:
-    linear-gradient(90deg, rgba(255, 250, 241, 0.16) 1px, transparent 1px) 0 0 / 1.1rem 1.1rem,
+    linear-gradient(90deg, rgba(255, 250, 241, 0.16) 1px, transparent 1px) 0 0 /
+      1.1rem 1.1rem,
     linear-gradient(180deg, rgba(255, 250, 241, 0.35), rgba(20, 20, 18, 0.74));
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.32);
   transform-origin: bottom;
@@ -329,7 +335,7 @@ h1 {
   grid-template-rows: auto minmax(0, 1fr);
   gap: 1rem;
   padding: 1rem 1rem 1.25rem;
-  background: var(--lavender);
+  background: var(--section);
   overflow: hidden;
 }
 
@@ -482,7 +488,8 @@ h1 {
   overflow: hidden;
   background:
     linear-gradient(120deg, rgba(255, 250, 241, 0.12), rgba(255, 250, 241, 0)),
-    linear-gradient(90deg, rgba(16, 16, 15, 0.14) 1px, transparent 1px) 0 0 / 2.2rem 2.2rem,
+    linear-gradient(90deg, rgba(16, 16, 15, 0.14) 1px, transparent 1px) 0 0 /
+      2.2rem 2.2rem,
     linear-gradient(180deg, #dad4c8, #807768);
 }
 
@@ -525,7 +532,8 @@ h1 {
 .project-shot-small {
   min-height: 14rem;
   background:
-    linear-gradient(90deg, rgba(16, 16, 15, 0.1) 1px, transparent 1px) 0 0 / 1.2rem 1.2rem,
+    linear-gradient(90deg, rgba(16, 16, 15, 0.1) 1px, transparent 1px) 0 0 /
+      1.2rem 1.2rem,
     linear-gradient(135deg, #cbc1b2, #242421);
 }
 
@@ -591,7 +599,7 @@ h1 {
   --stack-index: 4;
   min-height: 100svh;
   padding: 2rem 1rem 3rem;
-  background: var(--lavender);
+  background: var(--section);
 }
 
 .statement p {
@@ -601,6 +609,7 @@ h1 {
   line-height: 1.28;
   font-weight: 400;
   text-align: justify;
+  color: var(--theme-red);
 }
 
 .clients-manifesto {
@@ -675,7 +684,11 @@ h1 {
   width: 1.15rem;
   height: 1.8rem;
   margin-right: 0.45rem;
-  background: repeating-linear-gradient(90deg, currentColor 0 0.18rem, transparent 0.18rem 0.36rem);
+  background: repeating-linear-gradient(
+    90deg,
+    currentColor 0 0.18rem,
+    transparent 0.18rem 0.36rem
+  );
 }
 
 .logo-serif {
@@ -748,10 +761,11 @@ h1 {
 
 .contact {
   position: relative;
-  
+
   padding: 3rem 1rem;
   background: var(--blue);
-  color: var(--white);
+  background: var(--theme-red);
+  color: #fff;
 }
 
 .hero {
@@ -901,7 +915,7 @@ main > section {
   }
 
   .intro h2 {
-    line-height: 0.80;
+    line-height: 0.8;
     max-width: 9ch;
   }
 
